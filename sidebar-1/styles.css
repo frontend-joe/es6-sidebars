@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #2e2c36;
+  color: #f7f7f7;
+  font-family: "Euclid Circular A";
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: #211f25;
+  transition: width 0.4s;
+}
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 1.25rem 0 0;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.sidebar header button {
+  width: 64px;
+}
+
+.sidebar header img {
+  height: 24px;
+  width: 24px;
+  margin-left: 24px;
+  margin-right: 14px;
+  object-fit: contain;
+}
+
+.sidebar button {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 16px 0 25px;
+  color: #f7f7f7;
+  transition: 0.25s;
+}
+
+.sidebar button.active,
+.subnav {
+  background: #32303c;
+}
+
+.sidebar button:hover {
+  background: #3c3a48;
+}
+
+.sidebar button span:nth-child(2) {
+  flex: 1 1 auto;
+}
+
+.sidebar button.active span:nth-child(3) {
+  rotate: -180deg;
+}
+
+.sub-nav button.active::before {
+  background: #f9f9f9;
+}
+
+.subnav {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
+}
+
+.subnav-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.subnav button {
+  padding-left: 64px;
+}
+
+.subnav button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  translate: 0 -50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 40%);
+}
+
+.material-symbols-outlined {
+  font-size: 22px;
+  transition: 0.3s;
+}

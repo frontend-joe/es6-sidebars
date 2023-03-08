@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,1,0"
+    />
+    <title>Sidebar 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header>
+        <img src="logo.svg" />
+        <span> DataHub </span>
+      </header>
+      <button>
+        <span class="material-symbols-outlined"> home </span>
+        <span>Home</span>
+      </button>
+      <button onclick="handleHeaderClicked('tools')">
+        <span class="material-symbols-outlined"> build </span>
+        <span>Tools</span>
+        <span class="material-symbols-outlined"> expand_more </span>
+      </button>
+      <div id="tools" class="subnav">
+        <div class="subnav-inner">
+          <button>
+            <span>Documents</span>
+          </button>
+          <button>
+            <span>Editor</span>
+          </button>
+          <button>
+            <span>Themes</span>
+          </button>
+        </div>
+      </div>
+      <button onclick="handleHeaderClicked('settings')">
+        <span class="material-symbols-outlined"> settings </span>
+        <span>Settings</span>
+        <span class="material-symbols-outlined"> expand_more </span>
+      </button>
+      <div id="settings" class="subnav">
+        <div class="subnav-inner">
+          <button>
+            <span>Display</span>
+          </button>
+          <button>
+            <span>Audio</span>
+          </button>
+          <button>
+            <span>Interface</span>
+          </button>
+          <button>
+            <span>Accessibility</span>
+          </button>
+        </div>
+      </div>
+      <button>
+        <span class="material-symbols-outlined"> account_circle </span>
+        <span>Profile</span>
+      </button>
+      <button>
+        <span class="material-symbols-outlined"> logout </span>
+        <span>Sign Out</span>
+      </button>
+    </aside>
+    <script src="main.js"></script>
+  </body>
+</html>
