@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #e5e6f7;
+  color: #595b78;
+  font-family: "Euclid Circular A";
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 20px;
+  background: #ffffff;
+  user-select: none;
+}
+
+.handle {
+  position: absolute;
+  z-index: 100;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+.handle:hover,
+.handle:active {
+  background: #f7f7f7;
+  cursor: col-resize;
+}
+
+.sidebar button {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 16px;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.sidebar button:hover {
+  background: #4950f6;
+  color: #f7f7f7;
+}
+
+.material-symbols-outlined {
+  font-size: 22px;
+}
